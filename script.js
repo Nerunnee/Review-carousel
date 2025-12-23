@@ -1,5 +1,4 @@
 const peoploIntro = document.getElementById("intro");
-const surpriseBtn = document.getElementById("surprise-btn");
 
 const peopleInfos = [
   {
@@ -51,3 +50,11 @@ const selectContent = () => {
 };
 
 selectContent(index);
+
+const surpriseBtn = () => {
+  const randomPerson =
+    peopleInfos[Math.floor(Math.random() * peopleInfos.length)];
+
+  selectContent();
+  return randomPerson;
+};
