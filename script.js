@@ -43,18 +43,16 @@ const selectContent = () => {
     <div class="person-container">
       <img src="${person.portraitImg}" alt="" />
       <h4>${person.name}</h4>
-      <h4>${person.job}</h4>
+      <h6>${person.job}</h6>
       <p>${person.intro}</p>
     </div>`;
   }
 };
 
-selectContent(index);
-
 const surpriseBtn = () => {
-  const randomPerson =
-    peopleInfos[Math.floor(Math.random() * peopleInfos.length)];
+  index = Math.floor(Math.random() * peopleInfos.length);
 
   selectContent();
-  return randomPerson;
 };
+
+selectContent();
